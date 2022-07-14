@@ -7,9 +7,10 @@
 		"preview": "vite preview --port 4173",
 		"build-only": "vite build",
 		"type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-		"test:unit": "vitest --environment jsdom",
 		"lint:check": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
 		"lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+		"test:unit:check": "vitest run --environment jsdom --passWithNoTests",
+		"test:unit:watch": "vitest --environment jsdom --passWithNoTests",
 		"prepare": "husky install"
 	},
 	"dependencies": {
